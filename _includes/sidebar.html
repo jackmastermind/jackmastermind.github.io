@@ -1,0 +1,47 @@
+<aside class="sidebar">
+  <!-- Profile Image -->
+  <div class="profile-image-wrapper">
+    <img
+      src="{{ site.author.avatar }}"
+      alt="{{ site.author.name }}"
+      class="profile-image"
+    >
+  </div>
+
+  <!-- Name & Title -->
+  <div class="profile-info">
+    <h1 class="profile-name">{{ site.author.name }}</h1>
+    <p class="profile-title">{{ site.author.title }}</p>
+  </div>
+
+  <!-- Meta Details -->
+  <div class="profile-meta">
+    <div class="meta-item">
+      <i data-lucide="map-pin"></i>
+      <span>{{ site.author.location }}</span>
+    </div>
+    <div class="meta-item">
+      <i data-lucide="mail"></i>
+      <span>{{ site.author.email }}</span>
+    </div>
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="sidebar-nav">
+    {% for link in site.data.navigation.links %}
+    <a href="{{ link.url }}" class="nav-link" {% if link.url contains 'http' %}target="_blank" rel="noopener"{% endif %}>
+      <span class="nav-link-content">
+        <i data-lucide="{{ link.icon }}"></i>
+        <span class="nav-link-text">{{ link.name }}</span>
+      </span>
+      <i data-lucide="external-link" class="external-icon"></i>
+    </a>
+    {% endfor %}
+  </nav>
+
+  <!-- Footer -->
+  <div class="sidebar-footer">
+    &copy; {{ 'now' | date: '%Y' }} {{ site.author.name | split: ' ' | last }}.
+    <br>Built with Jekyll.
+  </div>
+</aside>

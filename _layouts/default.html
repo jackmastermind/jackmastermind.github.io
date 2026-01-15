@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+  <div class="site-wrapper">
+    {% include sidebar.html %}
+    <main class="main-content">
+      <div class="content-container">
+        {{ content }}
+      </div>
+    </main>
+  </div>
+
+  <!-- Initialize Lucide icons -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+# Site Settings
+title: "Jack Thompson"
+description: "Jack Thompson's portfolio & blog"
+url: "https://jackmastermind.github.io" # Your site URL, e.g., https://username.github.io
+baseurl: "" # Subpath, e.g., /blog (leave empty if hosted at root)
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+kramdown:
+  math_engine: mathjax
+
+# Profile Information (customize these)
+author:
+  name: "Jack Thompson"
+  title: "Digital sentience & AI welfare @ Princeton"
+  bio: ""
+  location: "Princeton, NJ"
+  email: "jackthompson[at]princeton[dot]edu"
+  avatar: "/profile.jpeg"
+
+# About Section (shown on home page)
+about:
+  tagline: "I research introspective AI & attention schema theory for digital sentience & AI safety."
+  extended: "I study computer science, cognitive science, & philosophy at Princeton University. I lead reading groups with Princeton AI Alignment, I do research in Princeton Neuroscience institute, and I write a philosophy of mind blog on substack. Other research interests include functional decision theory, comprehension & the intentional stance in LLMs, self-modification, and desire satisfaction theories of welfare."
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - mockup.js
+  - node_modules
+  - vendor
+  - "substack posts"
+  - README.md
+  - AGENTS.md
+  - CLAUDE.md
+  - "*.md.bak"
+
+# Sass settings
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-seo-tag

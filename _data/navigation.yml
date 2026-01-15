@@ -1,0 +1,15 @@
+# Sidebar navigation links
+# Customize the URLs and add/remove items as needed
+
+links:
+  - name: GitHub
+    url: https://github.com/jackmastermind
+    icon: github
+
+  - name: Substack
+    url: https://jacktlab.substack.com
+    icon: book-open
+
+  - name: CV / Resume
+    url: /resume.pdf
+    icon: file-text

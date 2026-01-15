@@ -1,0 +1,29 @@
+// ===========================================
+// Main Layout (Two-Column)
+// ===========================================
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+  }
+}
+
+.main-content {
+  flex: 1;
+  min-height: 100vh;
+  padding: $spacing-unit * 4;
+  background-color: $color-bg;
+
+  @media (min-width: $breakpoint-md) {
+    padding: $spacing-unit * 8;
+  }
+}
+
+.content-container {
+  max-width: $content-max-width;
+  margin: 0 auto;
+}

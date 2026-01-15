@@ -1,0 +1,306 @@
+// ===========================================
+// Main Content Area Styles
+// ===========================================
+
+// Section Label (e.g., "About Me", "Highlights")
+.section-label {
+  display: inline-block;
+  margin-bottom: $spacing-unit * 2;
+  padding: $spacing-unit $spacing-unit * 1.5;
+  font-family: $font-typewriter;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $color-accent-gold;
+  border-bottom: 2px solid $color-accent-gold;
+}
+
+// About Section
+.about-section {
+  margin-bottom: $spacing-unit * 10;
+}
+
+.about-tagline {
+  font-family: $font-slab;
+  font-size: 1.875rem;
+  line-height: 1.3;
+  margin-bottom: $spacing-unit * 3;
+  color: $color-text;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 2.25rem;
+  }
+}
+
+.about-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+// Posts Section
+.posts-section {
+  margin-bottom: $spacing-unit * 8;
+}
+
+.posts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-unit * 5;
+  padding-bottom: $spacing-unit * 2;
+  border-bottom: 1px solid rgba($color-border, 0.3);
+}
+
+.posts-title {
+  font-family: $font-typewriter;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.view-all-link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-unit / 2;
+  font-family: $font-typewriter;
+  font-size: 0.75rem;
+  color: $color-accent-gold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  [data-lucide] {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+// Post Cards
+.post-card {
+  position: relative;
+  padding: $spacing-unit * 3;
+  margin-bottom: $spacing-unit * 3;
+  background-color: $color-bg;
+  border-bottom: 2px solid $color-border;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-sidebar-bg;
+  }
+}
+
+.post-card-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-unit;
+
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.post-card-title {
+  font-family: $font-typewriter;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: $spacing-unit / 2;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+  }
+}
+
+.post-card-date {
+  font-family: $font-typewriter;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $color-accent-gold;
+  flex-shrink: 0;
+}
+
+.post-card-excerpt {
+  font-family: $font-slab;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: $spacing-unit * 2;
+}
+
+.post-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-unit * 1.5;
+}
+
+.tag {
+  font-family: $font-typewriter;
+  font-size: 0.75rem;
+  padding: $spacing-unit / 2 $spacing-unit;
+  background-color: $color-sidebar-bg;
+  color: $color-text-light;
+  border-radius: 2px;
+}
+
+// ===========================================
+// Single Post Page Styles
+// ===========================================
+
+.post {
+  max-width: $content-max-width;
+}
+
+.post-header {
+  margin-bottom: $spacing-unit * 6;
+}
+
+.post-meta-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-unit * 3;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-unit;
+  font-family: $font-typewriter;
+  font-size: 0.875rem;
+  color: $color-text-light;
+
+  &:hover {
+    color: $color-accent-magenta;
+  }
+
+  [data-lucide] {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.post-date {
+  font-family: $font-typewriter;
+  font-size: 0.875rem;
+  color: $color-accent-gold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.post-title {
+  font-family: $font-typewriter;
+  font-size: 2rem;
+  margin-bottom: $spacing-unit * 2;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 2.5rem;
+  }
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-unit * 1.5;
+}
+
+// Post Content
+.post-content {
+  font-family: $font-slab;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+
+  h2 {
+    margin-top: $spacing-unit * 5;
+    margin-bottom: $spacing-unit * 2;
+  }
+
+  h3 {
+    margin-top: $spacing-unit * 4;
+    margin-bottom: $spacing-unit * 1.5;
+  }
+
+  p {
+    margin-bottom: $spacing-unit * 2.5;
+  }
+
+  ul, ol {
+    margin-bottom: $spacing-unit * 2.5;
+    padding-left: $spacing-unit * 3;
+  }
+
+  li {
+    margin-bottom: $spacing-unit;
+  }
+
+  blockquote {
+    margin: $spacing-unit * 3 0;
+    padding: $spacing-unit * 2 $spacing-unit * 3;
+    border-left: 4px solid $color-accent-gold;
+    background-color: $color-sidebar-bg;
+    font-style: italic;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  code {
+    font-family: $font-typewriter;
+    font-size: 0.9em;
+    padding: 2px 6px;
+    background-color: $color-sidebar-bg;
+    border-radius: 2px;
+  }
+
+  pre {
+    margin: $spacing-unit * 3 0;
+    padding: $spacing-unit * 2;
+    background-color: $color-sidebar-bg;
+    border-radius: 2px;
+    overflow-x: auto;
+
+    code {
+      padding: 0;
+      background: none;
+    }
+  }
+
+  a {
+    color: $color-accent-gold;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: $color-accent-magenta;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: $spacing-unit * 3 0;
+    border-radius: 2px;
+  }
+
+  hr {
+    margin: $spacing-unit * 5 0;
+    border: none;
+    border-top: 1px solid $color-border;
+  }
+}
+
+.post-footer {
+  margin-top: $spacing-unit * 8;
+  padding-top: $spacing-unit * 4;
+  border-top: 1px solid rgba($color-border, 0.3);
+}

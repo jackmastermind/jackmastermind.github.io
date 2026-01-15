@@ -1,0 +1,34 @@
+// ===========================================
+// Color Palette (Solarized-inspired Parchment)
+// ===========================================
+
+$color-bg: #FDF6E3;           // Main background (warm cream)
+$color-sidebar-bg: #EEE8D5;   // Sidebar background
+$color-text: #586E75;         // Primary text
+$color-text-light: #657B83;   // Secondary text
+$color-accent-gold: #B58900;  // Gold accent
+$color-accent-magenta: #D33682; // Magenta accent (sidebar border)
+$color-button: #CB4B16;       // Orange button
+$color-button-hover: #DC322F; // Red button hover
+$color-border: #93A1A1;       // Borders
+
+// ===========================================
+// Typography
+// ===========================================
+
+$font-typewriter: 'Courier Prime', 'Courier New', monospace;
+$font-slab: 'Arvo', 'Roboto Slab', Georgia, serif;
+
+// ===========================================
+// Spacing & Sizing
+// ===========================================
+
+$sidebar-width: 320px;
+$content-max-width: 720px;
+$spacing-unit: 8px;
+
+// ===========================================
+// Breakpoints
+// ===========================================
+
+$breakpoint-md: 768px;

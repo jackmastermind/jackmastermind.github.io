@@ -1,0 +1,29 @@
+---
+layout: default
+title: Home
+---
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="section-label">About Me</div>
+  <h2 class="about-tagline">{{ site.about.tagline }}</h2>
+  <p class="about-text">
+    {{ site.author.bio }} {{ site.about.extended }}
+  </p>
+</section>
+
+<!-- Posts Section -->
+<section class="posts-section">
+  <div class="posts-header">
+    <h2 class="posts-title">Highlights</h2>
+    <a href="{{ '/posts/' | relative_url }}" class="view-all-link">
+      View All <i data-lucide="chevron-right"></i>
+    </a>
+  </div>
+
+  <div class="posts-list">
+    {% for post in site.posts limit:4 %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+  </div>
+</section>
