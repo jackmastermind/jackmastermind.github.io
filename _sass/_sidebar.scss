@@ -1,5 +1,5 @@
 // ===========================================
-// Sidebar Styles
+// Sidebar Styles (Editorial)
 // ===========================================
 
 .sidebar {
@@ -8,32 +8,34 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  padding: $spacing-unit * 4;
+  padding: $spacing-unit * 5 $spacing-unit * 4.5;
   background-color: $color-sidebar-bg;
-  font-family: $font-slab;
+  font-family: $font-sans;
 
   @media (min-width: $breakpoint-md) {
     width: $sidebar-width;
-    min-height: 100vh;
-    border-right: 4px solid $color-accent-magenta;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    border-right: 1px solid $color-border;
   }
 }
 
 // Profile Image
 .profile-image-wrapper {
-  margin-bottom: $spacing-unit * 4;
+  margin-bottom: $spacing-unit * 3;
 }
 
 .profile-image {
-  width: 128px;
-  height: 128px;
+  width: 92px;
+  height: 92px;
   margin: 0 auto;
   display: block;
   overflow: hidden;
-  border-radius: 2px;
-  border: 2px solid $color-border;
+  border-radius: 50%;
   filter: grayscale(100%);
-  transition: filter 0.5s ease;
+  transition: filter 0.4s ease;
   object-fit: cover;
 
   &:hover {
@@ -47,7 +49,7 @@
 
 // Profile Info
 .profile-info {
-  margin-bottom: $spacing-unit * 4;
+  margin-bottom: $spacing-unit * 3;
   text-align: center;
 
   @media (min-width: $breakpoint-md) {
@@ -56,86 +58,102 @@
 }
 
 .profile-name {
-  font-family: $font-typewriter;
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: $spacing-unit;
+  font-family: $font-display;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: $spacing-unit * 0.75;
 }
 
 .profile-title {
-  font-size: 0.875rem;
-  opacity: 0.8;
+  font-family: $font-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: $color-text-light;
 }
 
 // Profile Meta (location, email)
 .profile-meta {
-  margin-bottom: $spacing-unit * 5;
-  font-size: 0.875rem;
-  opacity: 0.75;
+  margin-bottom: $spacing-unit * 3;
+  font-size: 0.85rem;
+  color: $color-text-muted;
 
   .meta-item {
     display: flex;
     align-items: center;
     gap: $spacing-unit;
-    margin-bottom: $spacing-unit * 1.5;
+    margin-bottom: $spacing-unit * 1.25;
 
     [data-lucide] {
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
+      opacity: 0.7;
     }
   }
+}
+
+// Hairline rule between meta and nav
+.profile-meta {
+  padding-bottom: $spacing-unit * 3;
+  border-bottom: 1px solid $color-border;
 }
 
 // Sidebar Navigation
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: $spacing-unit * 2;
+  gap: 0;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: $spacing-unit * 1.5;
-  background-color: $color-sidebar-bg;
-  border: 1px solid $color-border;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  padding: $spacing-unit * 1.125 0;
+  font-size: 1rem;
+  color: $color-text;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease;
 
   &:hover {
-    background-color: darken($color-sidebar-bg, 5%);
-    color: $color-accent-magenta;
+    color: $color-accent;
   }
 }
 
 .nav-link-content {
   display: flex;
   align-items: center;
-  gap: $spacing-unit * 1.5;
+  gap: $spacing-unit * 1.25;
+
+  [data-lucide] {
+    width: 16px;
+    height: 16px;
+    opacity: 0.65;
+  }
 }
 
 .nav-link-text {
-  font-family: $font-typewriter;
+  font-family: $font-sans;
 }
 
 .external-icon {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
+  color: $color-tag-border;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 
   .nav-link:hover & {
     opacity: 1;
+    color: $color-accent;
   }
 }
 
 // Sidebar Footer
 .sidebar-footer {
   margin-top: auto;
-  padding-top: $spacing-unit * 5;
+  padding-top: $spacing-unit * 4;
   font-size: 0.75rem;
-  opacity: 0.5;
-  line-height: 1.5;
+  color: $color-tag-border;
+  line-height: 1.6;
 }

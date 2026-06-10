@@ -1,30 +1,42 @@
 // ===========================================
-// Color Palette (Solarized-inspired Parchment)
+// Color Palette (Editorial — warm paper & ink)
 // ===========================================
 
-$color-bg: #FDF6E3;           // Main background (warm cream)
-$color-sidebar-bg: #EEE8D5;   // Sidebar background
-$color-text: #586E75;         // Primary text
-$color-text-light: #657B83;   // Secondary text
-$color-accent-gold: #B58900;  // Gold accent
-$color-accent-magenta: #D33682; // Magenta accent (sidebar border)
-$color-button: #CB4B16;       // Orange button
-$color-button-hover: #DC322F; // Red button hover
-$color-border: #93A1A1;       // Borders
+$color-bg: #FAF9F6;           // Paper (the content sheet)
+$color-sidebar-bg: #FAF9F6;   // Sidebar shares the paper field
+$color-ground: #E9E3D7;       // Warm neutral ground behind the paper panel
+$color-text: #1C1B19;         // Primary ink
+$color-text-light: #6F6A61;   // Secondary text
+$color-text-muted: #8A857A;   // Meta / tertiary text
+$color-accent: #7C2D2D;       // Oxblood accent (links, hover)
+$color-kicker: #A8967C;       // Warm taupe (kickers, dates)
+$color-border: #E7E3DA;       // Hairline rules & borders
+$color-tag-border: #E0DCCF;   // Tag pill border
+
+// Back-compat aliases (referenced in older partials)
+$color-accent-gold: $color-kicker;
+$color-accent-magenta: $color-accent;
+$color-button: $color-accent;
+$color-button-hover: #5E2020;
 
 // ===========================================
 // Typography
 // ===========================================
 
-$font-typewriter: 'Courier Prime', 'Courier New', monospace;
-$font-slab: 'Arvo', 'Roboto Slab', Georgia, serif;
+$font-display: 'Spectral', Georgia, 'Times New Roman', serif;   // Headlines
+$font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;    // Body copy
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; // Labels / meta
+
+// Back-compat aliases
+$font-typewriter: $font-sans;
+$font-slab: $font-serif;
 
 // ===========================================
 // Spacing & Sizing
 // ===========================================
 
-$sidebar-width: 320px;
-$content-max-width: 720px;
+$sidebar-width: 300px;
+$content-max-width: 760px;
 $spacing-unit: 8px;
 
 // ===========================================

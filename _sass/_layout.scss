@@ -2,28 +2,41 @@
 // Main Layout (Two-Column)
 // ===========================================
 
+// Whole layout is capped and centered as one block, so the sidebar and
+// content stay adjacent and any leftover space falls on the outer edges.
+$layout-max-width: 1180px;
+
 .site-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: $color-bg;
 
+  // Paper panel: the layout is a full-height sheet centered on the warm
+  // ground, its edges terminated by a hairline on each side.
   @media (min-width: $breakpoint-md) {
     flex-direction: row;
+    max-width: $layout-max-width;
+    margin: 0 auto;
+    border-left: 1px solid $color-border;
+    border-right: 1px solid $color-border;
   }
 }
 
 .main-content {
   flex: 1;
-  min-height: 100vh;
-  padding: $spacing-unit * 4;
+  min-width: 0;
+  padding: $spacing-unit * 5;
   background-color: $color-bg;
 
   @media (min-width: $breakpoint-md) {
-    padding: $spacing-unit * 8;
+    padding: $spacing-unit * 9 $spacing-unit * 8 $spacing-unit * 9 $spacing-unit * 7;
   }
 }
 
+// Reading column sits left-aligned against the sidebar (not centered in the
+// viewport), which is what removes the large interior gap on wide screens.
 .content-container {
   max-width: $content-max-width;
-  margin: 0 auto;
+  margin: 0;
 }

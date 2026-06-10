@@ -1,42 +1,42 @@
 // ===========================================
-// Main Content Area Styles
+// Main Content Area Styles (Editorial)
 // ===========================================
 
-// Section Label (e.g., "About Me", "Highlights")
+// Kicker label (e.g., "About Me", "Archive")
 .section-label {
   display: inline-block;
   margin-bottom: $spacing-unit * 2;
-  padding: $spacing-unit $spacing-unit * 1.5;
-  font-family: $font-typewriter;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-family: $font-sans;
+  font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: $color-accent-gold;
-  border-bottom: 2px solid $color-accent-gold;
+  letter-spacing: 0.18em;
+  color: $color-kicker;
 }
 
 // About Section
 .about-section {
-  margin-bottom: $spacing-unit * 10;
+  margin-bottom: $spacing-unit * 8;
 }
 
 .about-tagline {
-  font-family: $font-slab;
-  font-size: 1.875rem;
-  line-height: 1.3;
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 2.1rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
   margin-bottom: $spacing-unit * 3;
   color: $color-text;
 
   @media (min-width: $breakpoint-md) {
-    font-size: 2.25rem;
+    font-size: 2.35rem;
   }
 }
 
 .about-text {
-  font-size: 1.125rem;
-  line-height: 1.7;
-  opacity: 0.85;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: $color-text-light;
 }
 
 // Posts Section
@@ -46,110 +46,107 @@
 
 .posts-header {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  margin-bottom: $spacing-unit * 5;
-  padding-bottom: $spacing-unit * 2;
-  border-bottom: 1px solid rgba($color-border, 0.3);
+  margin-bottom: $spacing-unit;
 }
 
 .posts-title {
-  font-family: $font-typewriter;
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-family: $font-sans;
+  font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.18em;
+  color: $color-text;
 }
 
 .view-all-link {
   display: flex;
   align-items: center;
-  gap: $spacing-unit / 2;
-  font-family: $font-typewriter;
-  font-size: 0.75rem;
-  color: $color-accent-gold;
+  gap: $spacing-unit * 0.5;
+  font-family: $font-sans;
+  font-size: 0.74rem;
+  color: $color-accent;
 
   &:hover {
+    color: $color-accent;
     text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   [data-lucide] {
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
   }
 }
 
-// Post Cards
+// Post Cards (hairline editorial list)
 .post-card {
   position: relative;
-  padding: $spacing-unit * 3;
-  margin-bottom: $spacing-unit * 3;
-  background-color: $color-bg;
-  border-bottom: 2px solid $color-border;
-  border-radius: 2px;
-  transition: background-color 0.3s ease;
+  padding: $spacing-unit * 3.25 0;
+  border-top: 1px solid $color-border;
+  transition: none;
 
-  &:hover {
-    background-color: $color-sidebar-bg;
+  &:hover .post-card-title a {
+    color: $color-accent;
   }
 }
 
 .post-card-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   margin-bottom: $spacing-unit;
-
-  @media (min-width: $breakpoint-md) {
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
-  }
 }
 
 .post-card-title {
-  font-family: $font-typewriter;
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: $spacing-unit / 2;
+  font-family: $font-display;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: $spacing-unit;
 
   a {
+    transition: color 0.2s ease;
+
     &:hover {
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 4px;
+      color: $color-accent;
     }
   }
 }
 
 .post-card-date {
-  font-family: $font-typewriter;
-  font-size: 0.75rem;
+  font-family: $font-sans;
+  font-size: 0.7rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: $color-accent-gold;
+  letter-spacing: 0.12em;
+  color: $color-kicker;
+  margin-bottom: $spacing-unit;
   flex-shrink: 0;
 }
 
 .post-card-excerpt {
-  font-family: $font-slab;
-  line-height: 1.6;
-  opacity: 0.9;
-  margin-bottom: $spacing-unit * 2;
+  font-family: $font-serif;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: $color-text-light;
+  margin-bottom: $spacing-unit * 1.5;
 }
 
 .post-card-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: $spacing-unit * 1.5;
+  gap: $spacing-unit;
 }
 
 .tag {
-  font-family: $font-typewriter;
-  font-size: 0.75rem;
-  padding: $spacing-unit / 2 $spacing-unit;
-  background-color: $color-sidebar-bg;
-  color: $color-text-light;
-  border-radius: 2px;
+  font-family: $font-sans;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  padding: $spacing-unit * 0.375 $spacing-unit * 1.25;
+  color: $color-text-muted;
+  border: 1px solid $color-tag-border;
+  border-radius: 999px;
 }
 
 // ===========================================
@@ -175,12 +172,12 @@
   display: flex;
   align-items: center;
   gap: $spacing-unit;
-  font-family: $font-typewriter;
-  font-size: 0.875rem;
+  font-family: $font-sans;
+  font-size: 0.85rem;
   color: $color-text-light;
 
   &:hover {
-    color: $color-accent-magenta;
+    color: $color-accent;
   }
 
   [data-lucide] {
@@ -190,41 +187,48 @@
 }
 
 .post-date {
-  font-family: $font-typewriter;
-  font-size: 0.875rem;
-  color: $color-accent-gold;
+  font-family: $font-sans;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: $color-kicker;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.12em;
 }
 
 .post-title {
-  font-family: $font-typewriter;
-  font-size: 2rem;
-  margin-bottom: $spacing-unit * 2;
+  font-family: $font-display;
+  font-weight: 500;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: $spacing-unit * 2.5;
 
   @media (min-width: $breakpoint-md) {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
 }
 
 .post-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: $spacing-unit * 1.5;
+  gap: $spacing-unit;
 }
 
 // Post Content
 .post-content {
-  font-family: $font-slab;
-  font-size: 1.0625rem;
-  line-height: 1.8;
+  font-family: $font-serif;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #2E2C28;
 
   h2 {
+    font-size: 1.6rem;
     margin-top: $spacing-unit * 5;
     margin-bottom: $spacing-unit * 2;
   }
 
   h3 {
+    font-size: 1.3rem;
     margin-top: $spacing-unit * 4;
     margin-bottom: $spacing-unit * 1.5;
   }
@@ -244,9 +248,9 @@
 
   blockquote {
     margin: $spacing-unit * 3 0;
-    padding: $spacing-unit * 2 $spacing-unit * 3;
-    border-left: 4px solid $color-accent-gold;
-    background-color: $color-sidebar-bg;
+    padding: $spacing-unit * 0.5 0 $spacing-unit * 0.5 $spacing-unit * 3;
+    border-left: 2px solid $color-accent;
+    color: $color-text-light;
     font-style: italic;
 
     p:last-child {
@@ -255,18 +259,18 @@
   }
 
   code {
-    font-family: $font-typewriter;
-    font-size: 0.9em;
+    font-family: 'SF Mono', 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.88em;
     padding: 2px 6px;
-    background-color: $color-sidebar-bg;
-    border-radius: 2px;
+    background-color: #F1ECE2;
+    border-radius: 3px;
   }
 
   pre {
     margin: $spacing-unit * 3 0;
-    padding: $spacing-unit * 2;
-    background-color: $color-sidebar-bg;
-    border-radius: 2px;
+    padding: $spacing-unit * 2.5;
+    background-color: #F1ECE2;
+    border-radius: 6px;
     overflow-x: auto;
 
     code {
@@ -276,12 +280,13 @@
   }
 
   a {
-    color: $color-accent-gold;
+    color: $color-accent;
     text-decoration: underline;
+    text-decoration-thickness: 1px;
     text-underline-offset: 2px;
 
     &:hover {
-      color: $color-accent-magenta;
+      text-decoration-thickness: 2px;
     }
   }
 
@@ -289,7 +294,7 @@
     max-width: 100%;
     height: auto;
     margin: $spacing-unit * 3 0;
-    border-radius: 2px;
+    border-radius: 4px;
   }
 
   hr {
@@ -302,5 +307,5 @@
 .post-footer {
   margin-top: $spacing-unit * 8;
   padding-top: $spacing-unit * 4;
-  border-top: 1px solid rgba($color-border, 0.3);
+  border-top: 1px solid $color-border;
 }
